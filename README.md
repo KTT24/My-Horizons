@@ -1,6 +1,6 @@
 # My-Horizons
 
-The multipurpose Animal Crossing New Horizons Website full of useful and fun tools and much more
+The multipurpose Netendo Switch Gaming Website full of useful and fun tools and much more to bring together a comunity of gamers alike.
 
 [![GitHub issues](https://img.shields.io/github/issues/KTT24/My-Horizons?style=for-the-badge)](https://github.com/KTT24/My-Horizons/issues)
 
@@ -9,9 +9,6 @@ The multipurpose Animal Crossing New Horizons Website full of useful and fun too
 
 Please read [CONTRIBUTING.md](repo/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-N/A
 
 ## Authors
 
