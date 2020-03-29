@@ -17,8 +17,24 @@ body {
     position: fixed;
     text-decoration: none;
     color: #85624f;
-    top: 26;
-    left: 26;
+    top: 28;
+    left: 28;
 }
 
+.menu {
+    display: none;
+    background-color: #fefae4; /* paper */
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    width: 200px;
+    height: 5000px;
+    box-shadow: 0px 1px 5px rgb(0,0,0,.2);    
+    border-radius: 25px;  
+}
 
+.time {
+    font-family: 'Dosis', sans-serif;
+    position: fixed;
+    left: 100; 
+}

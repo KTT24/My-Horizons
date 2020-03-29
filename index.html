@@ -1,14 +1,75 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/0af401707c.js" crossorigin="anonymous"></script>
-    <title>Your Horizons | Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+    <title>Your Horizons </title>
 </head>
 
 <body>
     <div class="navmenu">
-        <a href="index.html" class="menu-item"><i class="fas fa-bars"></i></a>
+        <a id="openMenu" class="menu-item"><i class="fas fa-bars"></i></a>
         <!-- <a href="Index.html" class="menu-item"><img src="img/menu-building.png" alt="Home" width="40px" height="40px"></a> -->
+    </div>
+
+    <div id="menu" class="menu">
+        <div id="time" class="time"></div>
     </div>
     
 </body>
+<script>
+var menu = document.getElementById("menu")
+
+var menuBTN = document.getElementById("openMenu")
+
+menuBTN.onclick = function() {
+    menu.style.display = "block";
+}
+
+window.onclick = function(event) {
+  if (event.target == menu) {
+    menu.style.display = "none";
+  }
+}
+
+var timeDisplay = document.getElementById("time");
+
+
+function time() {
+    currentTime.setHours(currentTime.getHours()+offset);
+}
+
+function renderTime() {
+    var currentTime = new Date();
+    var diem = "AM";
+    var h = currentTime.getHours();
+    var m = currentTime.getMinutes();
+    var s = currentTime.getSeconds();
+
+    if (h == 0) {
+        h = 12
+    } else if (h > 12) {
+        h = h - 12;
+        diem = "PM";
+    }
+
+    if (h < 10) {
+        h = "0" + h;
+    }
+
+    if (m < 10) {
+        m = "0" + m;
+    }
+
+
+
+    var myClock = document.getElementById ("time");
+    myClock.textContent = h + ":" + m ;
+
+    setTimeout ('renderTime()', 1000);
+}
+renderTime();
+
+setInterval(refreshTime, 1000);
+</script>
